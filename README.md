@@ -1,2 +1,2 @@
 # Mystore
-My Automation Projrct
+My Automation Project for Mystore web site
