@@ -1,2 +1,2 @@
 # Mystore
-My Automation Project for Mystore web site
+My automation tests for Mystore web site
