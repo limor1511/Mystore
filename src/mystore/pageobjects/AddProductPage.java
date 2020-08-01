@@ -1,6 +1,5 @@
 package mystore.pageobjects;
 
-import org.omg.CORBA.PRIVATE_MEMBER;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +12,6 @@ public class AddProductPage extends ApplicationPage {
 	private WebElement checkoutBtn; 
 	@FindBy(css = "[title='Close window']")
 	private WebElement closewindowsBtn;
-
 
 	public AddProductPage(WebDriver driver) {
 		super(driver);
@@ -28,7 +26,7 @@ public class AddProductPage extends ApplicationPage {
 		click(checkoutBtn);
 	}
 
-	public void closewindows() {
+	public void closeWindows() {
 		click(closewindowsBtn);
 	}
 }

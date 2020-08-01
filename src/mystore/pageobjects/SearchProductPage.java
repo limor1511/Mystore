@@ -1,13 +1,9 @@
 package mystore.pageobjects;
 
-import java.sql.Driver;
 import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 
 public class SearchProductPage extends ApplicationPage {
 
@@ -17,8 +13,6 @@ public class SearchProductPage extends ApplicationPage {
 	private WebElement cartbtn ;
 	@FindBy(css="a.quick-view")
 	private List<WebElement> quickViewList ;
-
-
 
 	public SearchProductPage(WebDriver driver) {
 		super(driver);
@@ -40,7 +34,7 @@ public class SearchProductPage extends ApplicationPage {
 		}
 	}
 
-	public void addTocart (String productName) {
+	public void addToCart (String productName) {
 		for (WebElement el : productList) {
 			if (el.getAttribute("title").toLowerCase().contains(productName.toLowerCase()))  {
 				sleepSec(1000);

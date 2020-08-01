@@ -1,7 +1,5 @@
 package mystore.pageobjects;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,8 +13,7 @@ public class ShoppingCart1SummaryPage extends ApplicationPage {
 		super(driver);
 	}
 
-	public void ProceedToCheckout() {
+	public void proceedToCheckout() {
 		click(ProceedToCheckout);
 	}
-
 }

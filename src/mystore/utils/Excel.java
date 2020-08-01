@@ -3,19 +3,17 @@ package mystore.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Excel {
-	
+
 	private static XSSFSheet ExcelWSheet;
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFCell Cell;
-	
+
 	/**
 	 * Read the Excel data and convert to a Matrix
 	 * @param - file path, sheet name
@@ -51,7 +49,7 @@ public class Excel {
 		return tabArray;
 	}
 
-	
+
 	/**
 	 * Read the test data from the Excel cell
 	 * @param - Row num and Col num
@@ -86,3 +84,4 @@ public class Excel {
 		}
 	}
 }
+

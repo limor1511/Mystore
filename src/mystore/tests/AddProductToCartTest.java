@@ -1,8 +1,6 @@
 package mystore.tests;
 
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
 import mystore.pageobjects.AddProductPage;
 import mystore.pageobjects.ApplicationPage;
 import mystore.pageobjects.AuthenticationPage;
@@ -12,7 +10,7 @@ import mystore.pageobjects.SearchProductPage;
 
 public class AddProductToCartTest extends BaseTest {
 
-	@Test //Add Product To Cart after sign in
+	@Test( description="Add Product To Cart after sign in")
 	public void e01_AddProductToCart()  {
 		// sign in
 		ApplicationPage ap = new HomePage(driver);
@@ -38,7 +36,6 @@ public class AddProductToCartTest extends BaseTest {
 		spp.chooseProduct("Blouse");
 		pp.addProductToCart();
 		adp.proceedToCheckoutBtn();
-
 	}
 }
 

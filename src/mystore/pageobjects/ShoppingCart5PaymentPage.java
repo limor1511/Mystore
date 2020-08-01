@@ -1,7 +1,5 @@
 package mystore.pageobjects;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,37 +10,34 @@ public class ShoppingCart5PaymentPage extends ApplicationPage {
 	private WebElement  PayByBankWire  ;
 	@FindBy(css= ".cheque")
 	private WebElement  PayByBankcheck  ;
-		@FindBy(css= ".button-medium[type='submit']")
+	@FindBy(css= ".button-medium[type='submit']")
 	private WebElement  ConfirmMyOrder  ;
 	@FindBy(css= ".cheque-indent")
 	private WebElement  ConfirmationMsgbyWire  ;
-	@FindBy(css= ".alert-success")   //#order-confirmation
+	@FindBy(css= ".alert-success")   
 	private WebElement  ConfirmationMsgbycheck  ;
-	
-	
+
 	public ShoppingCart5PaymentPage(WebDriver driver) {
 		super(driver);
 	}
 
-	public void PayByBankWire() {
+	public void payByBankWire() {
 		click(PayByBankWire);
 	}
-	
-	public void PayByBankcheck() {
+
+	public void payByBankCheck() {
 		click(PayByBankcheck);
 	}
-	
-	
-	public void ConfirmMyOrder() {
+
+	public void confirmMyOrder() {
 		click(ConfirmMyOrder);
 	}
 
-	public String ConfirmationMsg() {
+	public String confirmationMsg() {
 		return	getText(ConfirmationMsgbyWire);
 	}
 
-	public String ConfirmationMsgbycheck() {
+	public String confirmationMsgByCheck() {
 		return	getText(ConfirmationMsgbycheck);
 	}
-
 }

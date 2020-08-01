@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class ApplicationPage extends BasePage {
 
-
 	@FindBy(css="a.login")
 	private WebElement SignInLink;
 	@FindBy(css="a.logout")
@@ -29,7 +28,6 @@ public class ApplicationPage extends BasePage {
 	public ApplicationPage(WebDriver driver) {
 		super(driver);
 	}
-
 
 	public void signInBtn() {
 		click(SignInLink);
@@ -56,11 +54,11 @@ public class ApplicationPage extends BasePage {
 		driver.navigate().back();
 	}
 
-	public void numberOfproductAtCart() {
+	public void numberOfProductsAtCart() {
 		System.out.println(cartNumber.getText());
 	}
 
-	public String GetSuccessMsg() {
+	public String getSuccessMsg() {
 		return successMsg.getText();
 	}
 

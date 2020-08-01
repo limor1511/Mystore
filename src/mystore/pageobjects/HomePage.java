@@ -1,12 +1,9 @@
 package mystore.pageobjects;
 
 import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Sleeper;
 
 public class HomePage extends ApplicationPage {
 
@@ -20,7 +17,6 @@ public class HomePage extends ApplicationPage {
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}
-
 
 	public void choosePopularProduct(String productname) {
 		for (WebElement el : popularListName) {
@@ -37,5 +33,4 @@ public class HomePage extends ApplicationPage {
 		int result = Integer.parseInt(s);	
 		return result;
 	}
-
 }

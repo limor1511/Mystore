@@ -3,15 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mystore.tests.CreateAnAccountTest">
+      <class name="mystore.tests.E2ETest">
         <methods>
-          <include name="b04_CreateAnAccount"/>
-          <include name="b03_CreateAnAccount"/>
-          <include name="b01_CreateAnAccount"/>
-          <include name="b02_CreateAnAccount"/>
+          <include name="e04_Sanity"/>
+          <include name="e01_Sanity"/>
           <include name="setup"/>
+          <include name="e02_Sanity"/>
+          <include name="e03_Sanity"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- mystore.tests.CreateAnAccountTest -->
+      </class> <!-- mystore.tests.E2ETest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

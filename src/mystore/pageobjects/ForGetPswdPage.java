@@ -1,11 +1,8 @@
 package mystore.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class ForGetPswdPage extends ApplicationPage{
 
@@ -13,7 +10,6 @@ public class ForGetPswdPage extends ApplicationPage{
 	private WebElement emailAddress;
 	@FindBy(css=" .submit .icon-chevron-right.right")
 	private WebElement retrievePasswordBtn;
-
 
 	public ForGetPswdPage(WebDriver driver) {
 		super(driver);
@@ -23,7 +19,5 @@ public class ForGetPswdPage extends ApplicationPage{
 		fillText(emailAddress, email);
 		click(retrievePasswordBtn);
 	}
-
-
 }
 

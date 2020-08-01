@@ -1,7 +1,5 @@
 package mystore.pageobjects;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,17 +12,14 @@ public class ShoppingCart2SignInPage extends ApplicationPage {
 	private WebElement emailCreate;
 	@FindBy(css="#SubmitCreate")
 	private WebElement createAnAccountBtn;
-
 	@FindBy(css="#email")
 	private WebElement emailAddress;
 	@FindBy(css="#passwd")
 	private WebElement passwordField;
 	@FindBy(css="#SubmitLogin")
 	private WebElement signInBtn;
-
 	@FindBy(css=".lost_password.form-group >a")
 	private WebElement forGetPswdLink;
-
 	@FindBy(css=".account")
 	private WebElement myAccount;
 
@@ -32,9 +27,10 @@ public class ShoppingCart2SignInPage extends ApplicationPage {
 		super(driver);
 	}
 
-	public void ProceedToCheckout() {
+	public void proceedToCheckout() {
 		click(ProceedToCheckout);
 	}
+	
 	public void createAnAccount(String email) {
 		fillText(emailCreate, email);
 		click(createAnAccountBtn);
@@ -50,8 +46,7 @@ public class ShoppingCart2SignInPage extends ApplicationPage {
 		click(forGetPswdLink);
 	}
 
-	public void checksignInAccount() {
+	public void checkSignInAccount() {
 		myAccount.getText();
-
 	}	
 }

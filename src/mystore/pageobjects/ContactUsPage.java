@@ -4,12 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import sun.awt.windows.WEmbeddedFramePeer;
-
 public class ContactUsPage extends ApplicationPage {
 
-
-	@FindBy(css = "#id_contact")
+	@FindBy(css ="#id_contact")
 	private WebElement SubjectHeading;
 	@FindBy(css = ".selector")
 	private WebElement SubjectHeadingArrow;
@@ -24,38 +21,31 @@ public class ContactUsPage extends ApplicationPage {
 	@FindBy(css ="#submitMessage")
 	private WebElement submitMessage;
 
-
 	public ContactUsPage(WebDriver driver) {
 		super(driver);
 	}
 
-	public void SelectSubHeading(String subjectHeading) {
+	public void selectSubHeading(String subjectHeading) {
 		selectByValue(SubjectHeading, subjectHeading);
 	}
 
-	public void OpenSelectOption() {
+	public void openSelectOption() {
 		click(SubjectHeadingArrow);		
 	}
 
-	public void FillEmailAddress(String Email) {
+	public void fillEmailAddress(String Email) {
 		fillText(emailaddress, Email);
 	}
 
-	public void FillOrderRef(String Orderreferance) {
+	public void fillOrderRef(String Orderreferance) {
 		fillText(orderreferance, Orderreferance);
 	}
 
-
-	public void FillMessage(String Message) {
+	public void fillMessage(String Message) {
 		fillText(message, Message);
 	}
 
-	public void SendMessage() {
+	public void sendMessage() {
 		click(submitMessage);		
 	}
-
-	//	public void ChooseFileToUpload(String text) {
-	//	chooseFileToUpload(uploadfile, text);
-	//}
-
 }

@@ -13,8 +13,7 @@ public class MyAccountPage extends ApplicationPage {
 		super(driver);
 	}
 
-	public String MyAccountMsgPage() {	
+	public String myAccountMsgPage() {	
 		return MsgMyAccout.getText();
 	}
- 
-}
+ }

@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
 public class CreateAnAccountPage extends ApplicationPage {
 
 	@FindBy(css="#id_gender1")
@@ -55,9 +54,8 @@ public class CreateAnAccountPage extends ApplicationPage {
 	private WebElement mobilePhone ;
 	@FindBy(css="#alias")
 	private WebElement aliasAddress ;
-	@FindBy(css="#submitAccount")//need to fix
+	@FindBy(css="#submitAccount")
 	private WebElement submitAccountBtn;
-
 
 	public CreateAnAccountPage(WebDriver driver) {
 		super(driver);
@@ -92,7 +90,7 @@ public class CreateAnAccountPage extends ApplicationPage {
 		fillText(homePhone, HomePhone);
 		fillText(mobilePhone, MobilePhone);
 		fillText(aliasAddress, AliasAddress);
-		RegistrBtn();
+		registrBtn();
 	}
 
 	public void chooseRbMr() {
@@ -102,7 +100,6 @@ public class CreateAnAccountPage extends ApplicationPage {
 		}else
 			System.out.println(" radio button Mr Not check");
 	}
-
 
 	public void chooseRbMrs() {
 		sleepSec(5);		
@@ -166,6 +163,7 @@ public class CreateAnAccountPage extends ApplicationPage {
 	public void fillCompanyAddress1line(String CompanyAddress1line) {
 		fillText(address1Line, CompanyAddress1line);
 	}
+
 	public void fillCompanyAddress2line(String CompanyAddress2line) {
 		fillText(address2Line, CompanyAddress2line);
 	}
@@ -173,6 +171,7 @@ public class CreateAnAccountPage extends ApplicationPage {
 	public void fillCity(String City) {
 		fillText(city, City);
 	}
+
 	public void chooseState(String State) {
 		selectByVisableText(state, State);
 	}
@@ -192,6 +191,7 @@ public class CreateAnAccountPage extends ApplicationPage {
 	public void fillHomePhone(String HomePhone) {
 		fillText(homePhone, HomePhone);
 	}
+
 	public void fillMobilePhone(String MobilePhone) {
 		fillText(mobilePhone, MobilePhone);
 	}
@@ -200,9 +200,8 @@ public class CreateAnAccountPage extends ApplicationPage {
 		fillText(aliasAddress, AliasAddress);
 	}
 
-	public void RegistrBtn() {
+	public void registrBtn() {
 		waitForElement(submitAccountBtn, 3000);
 		click(submitAccountBtn);
 	}
-
 }

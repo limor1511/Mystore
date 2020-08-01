@@ -1,19 +1,15 @@
 package mystore.tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import mystore.pageobjects.ApplicationPage;
 import mystore.pageobjects.HomePage;
 import mystore.pageobjects.AuthenticationPage;
 import mystore.pageobjects.ForGetPswdPage;
 
-
 public class ForGetYourPswdTest extends BaseTest {
 
-	@Test // fill all fields
+	@Test ( description="Fill all fields")
 	public void c01_ForGetYourPswd() {
 		ApplicationPage ap = new HomePage(driver);
 		ap.signInBtn();
@@ -22,12 +18,12 @@ public class ForGetYourPswdTest extends BaseTest {
 		ForGetPswdPage fg = new ForGetPswdPage(driver);
 		String email="l@gmail.com";
 		fg.fillForGetPswdDetails(email);
-		String actual= fg.GetSuccessMsg();
+		String actual= fg.getSuccessMsg();
 		String expected=("A confirmation email has been sent to your address: "+email);
 		Assert.assertEquals(actual, expected);
 	}
 
-	@Test // invalid email address
+	@Test( description="Insert invalid email address")
 	public void c02_ForGetYourPswd() {
 		ApplicationPage ap = new HomePage(driver);
 		ap.signInBtn();
@@ -41,8 +37,7 @@ public class ForGetYourPswdTest extends BaseTest {
 		Assert.assertEquals(actual, expected);
 	}
 
-
-	@Test //  not register account
+	@Test ( description="Account not register")
 	public void c03_ForGetYourPswd() {
 		ApplicationPage ap = new HomePage(driver);
 		ap.signInBtn();
